@@ -1,0 +1,638 @@
+:root {
+    --dark-color: #1a1a1a;
+    --white-color: #D4A373;
+    --light-grey-color: #f5f5f5;
+    --gold-color: #ffb944;
+    --green-color: #ffaf8d;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;/* //////////////Para mac(apple)//////////////*/
+    -moz-osx-font-smoothing: grayscale;/* //////////////Para fire,googlemethernet//////////////*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #1a1a1a;
+} 
+a{
+    cursor: pointer;
+}
+
+
+.bgDark { background-color: var(--dark-color); }
+.bgLight { background-color: var(--white-color); }
+.bgLightGrey { background-color: var(--light-grey-color); }
+
+.colorDark { color: var(--dark-color) !important; }
+
+h1 { font-size: 66px; font-weight: 700; line-height: 80px; }
+h2 { font-size: 48px; margin-bottom: 30px; }
+h3 { font-size: 33px; color: #FAEDCD;}
+h5 { margin-bottom: 0px;}
+
+p {
+    font-size: 18px;
+    color: var(--dark-color);
+    opacity: .5;
+    line-height: 1.8;
+    margin-bottom: 0px;
+}
+
+a:hover {
+    text-decoration: none; 
+    color: #fff;
+    text-shadow: 0 0 5px #FAEDCD,
+    0 0 25px #1a1a1a,
+    0 0 50px #1a1a1a,
+    0 0 100px #1a1a1a;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 15px 26px;
+    min-width: 160px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    border: 2px solid var(--dark-color);
+}
+
+.btn-secondary {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+    border: 2px solid var(--white-color);
+}
+
+.btn-alternate {
+    background-color: transparent;
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+}
+
+.btn-primary:hover { background-color: #FAEDCD; border: 2px solid var(--dark-color); }
+.btn-secondary:hover { background-color: #FAEDCD; color: var(--dark-color); border: 2px solid var(--white-color); }
+.btn-secondary:focus { background-color: #FAEDCD !important; outline: none; border: 2px solid var(--white-color) !important; box-shadow: none; }
+
+.logo-brand {
+    max-width: 180px;
+    min-width: 160px;
+}
+
+section { padding: 120px 0; }
+
+.divider { border-bottom: 2px solid var(--light-grey-color); }
+
+.content-center {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    color: #FAEDCD;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form-control {
+    font-size: 14px;
+    border: 1px solid #cacaca;
+    padding: 15px;
+    border-radius: 2px;
+    height: 200px;
+}
+
+.form-control:focus {
+    border: 1px solid var(--dark-color);
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+    min-height: 100px;
+}
+
+.nav-link { color: var(--dark-color); }
+.nav-link:hover { color: var(--light-grey-color); }
+
+.navbar-toggler { font-size: 40px; }
+.navbar-toggler:focus { outline: none; }
+.navbar-nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+.nav-item:hover > ul{
+    display:block;
+    background: #D4A373;
+}
+.navbar-collapse ul li ul a{
+    right:-140px;
+    top:0px;
+}
+
+
+/* //////////////ss
+   Hero
+//////////////*/
+
+#hero {
+    /*background-image: url(../../assets/images/escuela-para-piloto-aviador.jpg);*/
+    background-size: cover;
+    padding-top: 90px;
+    min-height: 700px;
+    color: #f5f5f5;
+    background: #D4A373;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+    
+}
+
+
+#hero h1, #hero h2, #hero h3, #hero h4 {
+    color: #1a1a1a;
+}
+
+#contact{
+    margin-top: -150px;
+}
+/* //////////////
+   Portfolio
+//////////////*/
+
+.portfolio-container {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.portfolio-container img {
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-container:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.portfolio-details {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: auto;
+    background:#1a1a1a;
+}
+
+.portfolio-details h2 {
+    margin-bottom: 0px;
+}
+
+.portfolio-details a h2, .portfolio-details a p {
+    color: var(--white-color);
+}
+
+/* //////////////
+   Members
+//////////////*/
+
+.member-container {
+    position: relative;
+    margin: 10px 0;
+}
+
+.member-details {
+    position: absolute;
+    color: var(--white-color);
+    bottom: 0;
+    left: 20px;
+}
+
+.member-details span {
+    font-size: 14px;
+}
+
+.member-details i {
+    padding: 0 5px;
+}
+
+/* //////////////
+   Pricing
+//////////////*/
+
+.pricing-container {
+    margin: 15px 0;
+}
+
+.plans {
+    padding: 50px 80px;
+    border-radius: 2px;
+    min-width: 450px;
+}
+
+.plan-light {
+    background-color: var(--white-color);
+    border: 2px solid var(--dark-color);
+}
+
+.plan-dark {
+    background-color: var(--dark-color);
+    border: 2px solid var(--dark-color);
+    color: var(--white-color);
+}
+
+.plans h2 {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.plans h2 span {
+    font-size: 20px;
+}
+
+.plans ul {
+    list-style-type: square;
+}
+
+
+.card-container, .card-container2, .card-container3{
+    top: center;
+    position:  relative;
+    left: 48%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    width: 500px;
+    height: 600px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.6);
+    display: inline-block;
+    text-align: justify center;
+    margin: 50px;
+    color: #f5f5f5;
+}
+
+/* //////////////
+   Testimonial
+//////////////*/
+
+.carousel {
+    min-height: 240px;
+    padding: 40px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.carousel-item p {
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+.carousel-indicators li {
+    background-color: var(--dark-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    margin: 0 8px;
+}
+
+.carousel-control-next, .carousel-control-prev { 
+    color: var(--white-color);
+    opacity: 1;
+    width: 100px;
+
+}
+
+.control-button {
+    background-color: var(--dark-color);
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid var(--dark-color);
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-user {
+    max-width: 240px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.testimonial-user h6 {
+    margin-bottom: 0px;
+}
+
+.testimonial-user span {
+    font-size: 12px;
+}
+
+.testimonial-user img {
+    border-radius: 50%;
+    max-width: 50px;
+    text-align: center;
+}
+
+.rating i {
+    color: var(--gold-color);
+    font-size: 26px;
+}
+
+#testimonial{
+    margin-top: -280px;
+}
+
+/* //////////////
+   Footer
+//////////////*/
+
+footer {
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white-color);
+}
+
+footer a {
+    color: var(--white-color);
+}
+
+footer a:hover {
+    color: var(--white-color);
+}
+
+footer .list-inline .list-inline-item {
+    padding: 10px 15px;
+}
+
+/* //////////////
+   Media queries (estilos condicionales)
+//////////////*/
+
+@media (max-width: 575.98px) { 
+    h1 { font-size: 40px; line-height: normal; }
+    .portfolio-details h2 { font-size: 32px; }
+    .plans { min-width: unset; padding: 40px; }
+    .carousel-item p { font-size: 20px; }
+
+    .footer-menu { 
+        display: block !important;
+        padding: 20px 0 !important;
+        font-size: 20px;
+    
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .portfolio-details h2 { font-size: 30px; }
+    .plans { min-width: unset; padding: 40px 20px;}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+
+@media (min-width: 1200px) { }
+
+.port{
+    top: center;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.port form a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: coral;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 5px;
+    letter-spacing: 4px;
+}
+.port a:hover{
+    background: coral;
+    color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 0 5px coral,
+                0 0 25px coral,
+                0 0 50px coral,
+                0 0 100px coral;
+}
+
+.port a span{
+    position: absolute;
+    display: block;
+}
+
+.port a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, coral);
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%, 100%{
+        left: 100%;
+    }
+}
+.port a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, coral);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes btn-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%, 100%{
+        top: 100%;
+    }
+}
+.port a span:nth-child(3){
+    right: -100%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, coral);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes btn-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%, 100%{
+        right: 100%;
+    }
+}
+.port a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(270deg, transparent, #ff7f50);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes btn-anim4 {
+    0%{
+        bottom: -100%;
+    }
+    50%, 100%{
+        bottom: 100%;
+    }
+}
+
+
+
+.port2{
+    top: center;
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.port2 form a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--dark-color);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 5px;
+    letter-spacing: 4px;
+}
+.port2 a:hover{
+    background: #1a1a1a;
+    color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #1a1a1a,
+                0 0 25px #1a1a1a,
+                0 0 50px #1a1a1a,
+                0 0 100px #1a1a1a;
+}
+
+.port2 a span{
+    position: absolute;
+    display: block;
+}
+
+.port2 a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #1a1a1a);
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%, 100%{
+        left: 100%;
+    }
+}
+.port2 a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #1a1a1a);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes btn-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%, 100%{
+        top: 100%;
+    }
+}
+.port2 a span:nth-child(3){
+    right: -100%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, #1a1a1a);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes btn-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%, 100%{
+        right: 100%;
+    }
+}
+.port2 a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(270deg, transparent, #1a1a1a);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes btn-anim4 {
+    0%{
+        bottom: -100%;
+    }
+    50%, 100%{
+        bottom: 100%;
+    }
+}
